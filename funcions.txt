@@ -1,0 +1,16 @@
+function crearLinea(){
+    noStroke();
+   var colorA = colors[Math.floor(Math.random() * colors.length)];
+  fill(colorA);
+  rect(x, y, 20, 20);
+  
+  // Jiggling randomly on the horizontal axis
+  x =width/5;
+  // Moving up at a constant speed
+  y = y - 20;
+  
+  // Reset to the bottom
+  if (y < 0) {
+    y = height;
+  }
+}
